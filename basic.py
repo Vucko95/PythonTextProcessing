@@ -19,3 +19,5 @@ for index, filepath in enumerate(files):
     # merged = merged + content
     with open('new.csv', 'w') as file:
         file.write(merged)
+# .write WORKS WITH STRINGS
+# .writeLines WORKS WITH LINES
