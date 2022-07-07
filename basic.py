@@ -8,6 +8,7 @@ for index, filepath in enumerate(files):
         content = file.readlines()
         new_conent = content[1:]
     if index == 0:
+        # LIST TO STRING
         content = ''.join(content)
         merged = merged + content + '\n'
     else:
