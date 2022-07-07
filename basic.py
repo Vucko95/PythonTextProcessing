@@ -12,11 +12,11 @@ from pathlib import Path
 # Will Remove 1 word in file each time
 files_dir = Path('files')
 files = files_dir.iterdir()
+merged = ''
 for filepath in files:
     # print(filepath)
     with open(filepath, 'r') as file:
         content = file.read()
-        # modified_content = content[:-1]
-        modified_content = content.replace('amount', 'yes')
-    with open(filepath, 'w') as file:
-        file.write(modified_content)
+    merged = merged + content
+with open('new.csv', 'w') as file:
+    file.write(merged)
